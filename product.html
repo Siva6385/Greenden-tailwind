@@ -13,8 +13,8 @@
     <nav class=" bg-green-100 flex items-center justify-between shadow-2xl sticky top-0 z-10">
         <h1 class="p-2 text-2xl">GREENDEN</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-5 md:hidden">
+        <svg id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-5 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -31,64 +31,85 @@
             </li>
         </ul>
     </nav>
+    <div id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000 "
+        style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 text-gray-600 p-2 items-center">
+            <li>
+                <a href="index.html" class="hover:underline hover:text-black">Home</a>
+            </li>
+            <li>
+                <a href="product.html" class="hover:underline hover:text-black">Products</a>
+            </li>
+            <li>
+                <a href="contact.html" class="hover:underline hover:text-black">Contact</a>
+
+            </li>
+        </ul>
+
+
+    </div>
     <!--Our product-->
     <!--header-->
     <div class="text-center mt-5">
         <h1 class="font-bold text-2xl pt-5">Our Products</h1>
         <br>
-        <input type="text" placeholder="Search for a product" style="width: 80%;" class="border border-black p-2 ">
-    </div>
-    <!--image-->
-    <div class="text-center grid grid-cols-2 m-4 gap-2 md:grid-cols-4">
-        <div>
-            <img src="./images/6.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-1</p>
-            <p>$20</p>
-        </div>
-        <div>
-            <img src="./images/7.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-2</p>
-            <p>$20</p>
-        </div>
-        <div>
-            <img src="./images/8.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-3</p>
-            <p>$20</p>
-        </div>
-        <div>
-            <img src="./images/9.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-4</p>
-            <p>$20</p>
-        </div>
-        <div>
-            <img src="./images/10.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-5</p>
-            <p>$20</p>
-        </div>
-        <div>
-            <img src="./images/3.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-6</p>
-            <p>$20</p>
-        </div>
-        <div>
-            <img src="./images/12.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-7</p>
-            <p>$20</p>
-        </div>
-        <div>
-            <img src="./images/13.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
-            <p>Plant pot-8</p>
-            <p>$20</p>
-        </div>
+        <input type="text" id="Search" placeholder="Search for a product" style="width: 80%;" class="border border-black p-2 ">
+        <div id="product-container" class="text-center grid grid-cols-2 m-4 gap-2 md:grid-cols-4">
+            <div>
+                <img src="./images/6.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-1</p>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/7.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-2</p>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/8.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-3</p>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/9.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-4</p>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/10.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-5</p>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/3.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-6</p>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/12.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-7</p>
+                <p>$20</p>
+            </div>
+            <div>
+                <img src="./images/13.png" alt="" class="inline p-2 hover:shadow-xl transform hover:-translate-y-2">
+                <p>Plant pot-8</p>
+                <p>$20</p>
+            </div>
 
+        </div>
     </div>
-    <!--Footer-->
-    <div class="bg-green-100 mt-8 p-5">
-        <h1 class="font-bold text-3xl p-3">Greenden</h1>
-        <p class="p-3 mt-4">The Standard of lorem ipsum used since the 1500s is reprodused below for those internet</p>
-        <p class="p-3 mt-4">&copy;2021 Greenden.com</p>
+        <!--Footer-->
+        <div class="bg-green-100 mt-8 p-5">
+            <h1 class="font-bold text-3xl p-3">Greenden</h1>
+            <p class="p-3 mt-4">The Standard of lorem ipsum used since the 1500s is reprodused below for those internet
+            </p>
+            <p class="p-3 mt-4">&copy;2021 Greenden.com</p>
 
-    </div>
+        </div>
+        <script src="product.js"></script>
 
 </body>
 
